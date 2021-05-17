@@ -15,7 +15,7 @@ add_subdirectory(xml)
 add_subdirectory(soap)
 
 file(GLOB HEADERS ${HEADERS})
-add_library(tooska SHARED ${SOURCES} ${HEADERS})
+add_library(tooska ${SOURCES} ${HEADERS})
 #include_directories("src")
 find_package (Threads)
 

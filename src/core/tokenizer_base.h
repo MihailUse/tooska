@@ -60,7 +60,7 @@ class tokenizer_base
     bool is_valid_token(const std::string &token);
     std::string take_token();
     std::string next_token(int space = 0);
-    std::string put_token();
+    void put_token();
 
     std::vector<std::string> tokens() const;
 

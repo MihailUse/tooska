@@ -178,7 +178,7 @@ string token_parser::next_token(int space)
     return *(_token_it + space);
 }
 
-string token_parser::put_token()
+void token_parser::put_token()
 {
     --_token_it;
 }

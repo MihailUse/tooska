@@ -201,7 +201,7 @@ string tokenizer_base::next_token(int space)
     return *(_token_it + space);
 }
 
-string tokenizer_base::put_token()
+void tokenizer_base::put_token()
 {
     --_token_it;
 }

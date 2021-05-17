@@ -3,7 +3,6 @@
 
 #include "../global.h"
 
-#include <bits/stdc++.h>
 #include <functional>
 #include <vector>
 

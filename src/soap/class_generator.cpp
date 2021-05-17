@@ -41,7 +41,7 @@ void class_generator::generate() const
 void class_generator::mkdir(const std::string &path)
 {
 #ifdef _WIN32
-    _mkdir(path);
+    _mkdir(path.c_str());
 #else
 #   if _POSIX_C_SOURCE
     ::mkdir(path.c_str(), 0755);
