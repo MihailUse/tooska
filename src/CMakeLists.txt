@@ -19,6 +19,6 @@ add_library(tooska ${SOURCES} ${HEADERS})
 #include_directories("src")
 find_package (Threads)
 
-target_include_directories (tooska PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
-target_link_libraries (tooska ${CMAKE_THREAD_LIBS_INIT})
+target_include_directories (${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
+target_link_libraries (${PROJECT_NAME} ${CMAKE_THREAD_LIBS_INIT})
 
