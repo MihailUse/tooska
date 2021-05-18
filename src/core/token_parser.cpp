@@ -103,11 +103,11 @@ std::vector<std::string> token_parser::parse_tokens()
 
     if (_tokens.size() && _tokens.at(_tokens.size() - 1) == "<")
         _tokens.pop_back();
-    std::cout << "====TOKENS====" << std::endl;
-    std::for_each(_tokens.begin(), _tokens.end(), [&](std::string token){
-       std::cout << token << std::endl;
-    });
-    std::cout << "==============" << _tokens.size() << std::endl;
+    //std::cout << "====TOKENS====" << std::endl;
+    //std::for_each(_tokens.begin(), _tokens.end(), [&](std::string token){
+    //   std::cout << token << std::endl;
+    //});
+    //std::cout << "==============" << _tokens.size() << std::endl;
     _token_it = _tokens.begin();
     return _tokens;
 }
