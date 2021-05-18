@@ -24,10 +24,10 @@ html_document::html_document() : token_parser(), _root_tag(nullptr)
     _literals.push_back(new literal_t{">",  "<",  "",     true,  true});
     _literals.push_back(new literal_t{"\"", "\"", "\\\"", false, true, true});
     _literals.push_back(new literal_t{"'",  "'",  "\\'",  false, true, true});
-    _literals.push_back(new literal_t{"!--",  "-->",  "",     false,  false});
+    _literals.push_back(new literal_t{"<!--",  "-->",  "",     false,  false});
 
     _check_fns.push_back(&html_document::token);
-//    _check_fns.push_back(&isdigit);
+    _check_fns.push_back(&isdigit);
 }
 
 html_document::~html_document()
@@ -239,5 +239,9 @@ html_tag *html_document::parse_tag_begin(std::vector<string> &tokensList, size_t
 
     return tag;
 }
+
+//void html_document::remove_comments() {
+//    
+//};
 
 TOOSKA_END_NAMESPACE
